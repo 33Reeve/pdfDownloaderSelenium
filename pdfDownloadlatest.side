@@ -1,0 +1,74 @@
+{
+  "id": "d2283d55-0609-4dd2-bf1f-7db8459de71f",
+  "version": "2.0",
+  "name": "pdfDownload",
+  "url": "https://parivahan.gov.in",
+  "tests": [{
+    "id": "cc2e82c5-38fa-47a5-b50d-4575bb4f6e81",
+    "name": "pdfDownload",
+    "commands": [{
+      "id": "4cced329-1144-4ad2-b31a-2ba070f74940",
+      "comment": "",
+      "command": "open",
+      "target": "/parivahan//en/content/driving-licence-0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa0a2e83-a9e4-4bd4-a34e-39df2d8ca1b9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x572",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a5581adc-24a7-45c4-8600-39048b5909e9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=( 0.00 B )",
+      "targets": [
+        ["linkText=( 0.00 B )", "linkText"],
+        ["css=tr:nth-child(1) span > a", "css:finder"],
+        ["xpath=//a[contains(text(),'( 0.00 B )')]", "xpath:link"],
+        ["xpath=//div[@id='content-dlforms']/table/tbody/tr/td[3]/span/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'HTTPS://parivahan.gov.in/parivahan/sites/default/files/DownloadForm/cmvr/FORM-1A.pdf')])[2]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'( 0.00 B ) ')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win2099",
+      "windowTimeout": 2000
+    }, {
+      "id": "a7df8859-3ba2-4db5-b4e4-1ee680d83946",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "846c4a72-a70d-4cd0-82c4-7e72c8e2e088",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "daa61d9c-762d-488c-bc07-59539e492a4e",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c6d5d1e1-b4d0-4d21-babe-9b5e28dd8d7f",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["cc2e82c5-38fa-47a5-b50d-4575bb4f6e81"]
+  }],
+  "urls": ["https://parivahan.gov.in/"],
+  "plugins": []
+}
